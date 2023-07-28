@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Buttons</title>
+</head>
+<body>
+<h1>Color Buttons</h1>
+<p>Move your mouse over the buttons to change their background color.</p>
+<button id="redButton">Red</button>
+<button id="greenButton">Green</button>
+<button id="blueButton">Blue</button>
+<script>
+var redButton = document.getElementById("redButton");
+var greenButton = document.getElementById("greenButton");
+var blueButton = document.getElementById("blueButton");
+
+redButton.addEventListener("mouseover", function() {
+this.style.backgroundColor = "red";
+});
+
+redButton.addEventListener("mouseout", function() {
+this.style.backgroundColor = "#ffffff";
+});
+
+greenButton.addEventListener("mouseover", function() {
+this.style.backgroundColor = "green";
+});
+
+greenButton.addEventListener("mouseout", function() {
+this.style.backgroundColor = "#ffffff";
+});
+
+blueButton.addEventListener("mouseover", function() {
+this.style.backgroundColor = "blue";
+});
+
+blueButton.addEventListener("mouseout", function() {
+this.style.backgroundColor = "#ffffff";
+});
+</script>
+</body>
+</html>
+
