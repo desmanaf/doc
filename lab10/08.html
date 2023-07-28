@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NIC Number Year of Birth</title>
+</head>
+<body>
+<h1>NIC Number Year of Birth</h1>
+<p>Enter the student's NIC number and the year of birth will be displayed.</p>
+<input type="text" id="nicNumber" placeholder="Enter NIC number">
+<button type="button" id="submitButton">Submit</button>
+<script>
+var nicNumber = document.getElementById("nicNumber");
+var submitButton = document.getElementById("submitButton");
+
+submitButton.addEventListener("click", function() {
+var nicNumberValue = nicNumber.value;
+var yearOfBirth = nicNumberValue.substring(0, 2);
+document.getElementById("yearOfBirth").innerHTML = yearOfBirth;
+});
+</script>
+<p id="yearOfBirth"></p>
+</body>
+</html>

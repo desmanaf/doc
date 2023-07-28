@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <h1>Electricity Bill Calculator</h1>
+    <form method="post" action="">
+        <label for="units">Enter units consumed:</label>
+        <input type="number" name="units" required>
+        <input type="submit" value="Calculate">
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get the user input
+        $units = (int)$_POST["units"];
+
+        // Define the electricity rate based on units consumed
+        if ($units <= 50) {
+            $rate = 3.50;
+        } elseif ($units <= 100) {
+            $rate = 4.00;
+        } elseif ($units <= 150) {
+            $rate = 5.20;
+        } else {
+            $rate = 6.50;
+        }
+
+        // Calculate the total bill
+        $totalBill = $units * $rate;
+    ?>
+    <h2>Bill Details</h2>
+    <p>Units Consumed: <?php echo $units; ?></p>
+    <p>Rate per Unit: Rs. <?php echo $rate; ?>/unit</p>
+    <p>Total Bill: Rs. <?php echo $totalBill; ?></p>
+    <?php
+    }
+    ?>
+</body>
+</html>

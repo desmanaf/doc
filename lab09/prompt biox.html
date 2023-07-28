@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What day is it?</title>
+</head>
+<body>
+<h1>What day is it?</h1>
+<p>Enter a number from 1 to 7 to see what day it is.</p>
+<input type="text" id="dayInput" placeholder="Enter a number from 1 to 7">
+<button type="button" id="submitButton">Submit</button>
+<script>
+var dayInput = document.getElementById("dayInput");
+var submitButton = document.getElementById("submitButton");
+
+submitButton.addEventListener("click", function() {
+var day = parseInt(dayInput.value);
+var daysOfTheWeek = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "Sunday"];
+document.getElementById("dayOutput").innerHTML = daysOfTheWeek[day - 1];
+});
+</script>
+<p id="dayOutput"></p>
+</body>
+</html>

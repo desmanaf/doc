@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Button</title>
+</head>
+<body>
+<h1>Google Button</h1>
+<p>Click the button to go to Google or stay here.</p>
+<button id="googleButton">Go to Google</button>
+<script>
+var googleButton = document.getElementById("googleButton");
+
+googleButton.addEventListener("click", function() {
+var confirmBox = window.confirm("Are you sure you want to go to Google?");
+if (confirmBox) {
+window.location.href = "https://www.google.com";
+} else {
+alert("You decided to stay");
+}
+});
+</script>
+</body>
+</html>

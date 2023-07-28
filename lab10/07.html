@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mathematical Operations</title>
+</head>
+<body>
+<h1>Mathematical Operations</h1>
+<p>Enter two numbers and select an operation to perform.</p>
+<input type="text" id="number1" placeholder="Enter first number">
+<input type="text" id="number2" placeholder="Enter second number">
+<select id="operation">
+<option value="add">Addition</option>
+<option value="subtract">Subtraction</option>
+<option value="multiply">Multiplication</option>
+<option value="divide">Division</option>
+</select>
+<button type="button" id="calculateButton">Calculate</button>
+<script>
+var number1 = document.getElementById("number1");
+var number2 = document.getElementById("number2");
+var operation = document.getElementById("operation");
+var calculateButton = document.getElementById("calculateButton");
+
+calculateButton.addEventListener("click", function() {
+var firstNumber = parseInt(number1.value);
+var secondNumber = parseInt(number2.value);
+var result;
+
+switch (operation.value) {
+case "add":
+result = firstNumber + secondNumber;
+break;
+case "subtract":
+result = firstNumber - secondNumber;
+break;
+case "multiply":
+result = firstNumber * secondNumber;
+break;
+case "divide":
+result = firstNumber / secondNumber;
+break;
+}
+
+alert("The result is " + result);
+});
+</script>
+</body>
+</html>

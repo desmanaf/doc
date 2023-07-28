@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form action="process.php" method="post">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name" id="last-name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>
+      </div>
+      <div class="form-group">
+        <label for="academic-year">Academic Year</label>
+        <select name="academic-year" id="academic-year" class="form-control">
+          <option value="first_yr">First Year</option>
+          <option value="second_yr">Second Year</option>
+          <option value="third_yr">Third Year</option>
+          <option value="fourth_yr">Fourth Year</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="phone-no">Phone No</label>
+        <input type="text" name="phone-no" id="phone-no" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
